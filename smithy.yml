@@ -14,7 +14,7 @@ env:
 
 script:
   - echo "TESTING!!!!!!!!!!!"
-  - echo "MOAR TEST"
+  - echo "MOAR TESTING"
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
