@@ -11,6 +11,7 @@ env:
   - EAT_PIES_SLOWLY=10
 
 script:
+  - echo "TEST NO RUNNER IMAGE"
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
