@@ -1,7 +1,7 @@
 project: python
 runtime: 2.7
 
-runner_image: docker.webfilings.org/joshuagoodson/smithy-dart-runner:DEVOPS-1826-rc5
+runner_image: docker.webfilings.org/joshuagoodson/smithy-dart-runner:DEVOPS-1826-rc6
 
 requirements:
   - requirements.txt
