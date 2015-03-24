@@ -15,8 +15,8 @@ env:
   - EAT_PIES_SLOWLY=10
 
 script:
-  - mkdir awesomestaticcdndirthatcontainsfiles
-  - touch awesomestaticcdndirthatcontainsfiles/somefile.txt
+  - mkdir dist
+  - touch dist/somefile.txt
 
 after_script:
 
