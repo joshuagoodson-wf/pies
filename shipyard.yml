@@ -1,0 +1,16 @@
+base: 'ubuntu/trusty'
+
+workdir: /code
+
+python27:
+  requirements:
+    - requirements.txt
+
+add:
+  requirements.txt: /code
+
+after_install:
+  - mkdir /code
+  - cp -R /build/git/app.py /code
+
+cmd: python app.py
