@@ -7,6 +7,7 @@ python27:
     - requirements.txt
 
 add:
+  docs/: /some-docs-folder
   requirements.txt: /code/requirements.txt
 
 after_install:
