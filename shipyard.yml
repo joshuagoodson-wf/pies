@@ -6,6 +6,9 @@ python27:
   requirements:
     - requirements.txt
 
+npm:
+    - grunt
+
 add:
   docs/: /some-docs-folder
   requirements.txt: /code/requirements.txt
