@@ -16,4 +16,5 @@ add:
 after_install:
   - cp /build/git/app.py /code/
 
-cmd: python app.py
+entrypoint: ['run.sh']
+cmd: ['-c someconfigarg']
