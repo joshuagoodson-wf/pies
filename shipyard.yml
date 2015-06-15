@@ -13,9 +13,10 @@ npm:
 add:
   docs/: /some-docs-folder
   requirements.txt: /code/requirements.txt
+  run.sh: /usr/local/bin/run.sh
 
 after_install:
   - cp /build/git/app.py /code/
 
-entrypoint: ['run.sh']
+entrypoint: ['/usr/local/bin/run.sh']
 cmd: ['-c someconfigarg']
