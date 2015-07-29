@@ -17,5 +17,3 @@ shift $((OPTIND-1))
 [ "$1" = "--" ] && shift
 
 echo "config=$config, Leftovers: $@"
-
-yes
