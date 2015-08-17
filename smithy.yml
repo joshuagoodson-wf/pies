@@ -17,6 +17,7 @@ script:
   - touch hello_world.txt
   - echo "Hello World!" > hello_world.txt
   - tar cvf hello_world.tar hello_world.txt
+  - ls -la
 
 artifacts:
   - docker:
