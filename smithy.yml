@@ -20,7 +20,7 @@ script:
   - ls -la
 
 artifacts:
-  - docker:
+  - shipyard:
       - hello_world.tar
 
 after_script:
