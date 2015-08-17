@@ -1,7 +1,4 @@
-project: python
-runtime: 2.7
-
-runner_image: docker.webfilings.org/devops/smithy-runner:3.1.0
+project: tarball
 
 requirements:
   - requirements.txt
@@ -18,6 +15,13 @@ script:
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
   - ls -al $HOME
   - touch $HOME/pies.txt
+  - touch hello_world.txt
+  - echo "Hello World!" > hello_world.txt
+  - tar cvf hello_world.tar hello_world.txt
+
+artifacts:
+  - docker:
+      - hello_world.tar
 
 after_script:
   - echo 'afterwards'
