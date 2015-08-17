@@ -1,4 +1,5 @@
 project: tarball
+language: supercalifragilisticespealidosiousciouss
 
 requirements:
   - requirements.txt
