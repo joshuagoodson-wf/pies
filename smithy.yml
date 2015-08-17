@@ -11,8 +11,6 @@ env:
   - EAT_PIES_SLOWLY=10
 
 script:
-  - nosetests
-  - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
   - ls -al $HOME
   - touch $HOME/pies.txt
