@@ -1,0 +1,16 @@
+---
+base: 'ubuntu/trusty'
+
+apt:
+  packages:
+    - fortunes
+    - cowsay
+
+add:
+  docker.cow: /usr/share/cowsay/cows/docker.cow
+
+after_script:
+  - mv /usr/share/cowsay/cows/default.cow /usr/share/cowsay/cows/orig-default.cow
+  - ln -sv /usr/share/cowsay/cows/docker.cow /usr/share/cowsay/cows/default.cow
+
+cmd: ['/usr/games/fortune', '-a', '|', 'cowsay']
