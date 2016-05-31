@@ -1,5 +1,6 @@
-project: python
-runtime: 2.7
+project: node
+language: javascript
+
 
 requirements:
   - requirements.txt
@@ -12,14 +13,13 @@ env:
   - PHANTOMJS_CDNURL=https://s3.amazonaws.com/infeng-phantomjs
 
 script:
-  - nosetests
-  - python setup.py sdist
+  #- nosetests
+  #- python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
   - ls -al $HOME
   - find . -type f -ls
   - ls -al $HOME
   - ls -al 
-  - npm install phantomjs
 
 after_script:
   - tar -C docs -cvzf ./pie-help.tar.gz html

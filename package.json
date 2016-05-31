@@ -1,0 +1,30 @@
+{
+    "name": "pies",
+    "version": "0.6.0",
+    "description": "Tools to validate package.json files",
+    "author": {
+            "name": "Josh Ginger-Goodson",
+            "email": "joshua.goodson@workiva.com"
+    },
+    "repository": {
+            "type": "git",
+            "url": "git@github.com:joshuagoodson-wf/pies.git"
+    },
+    "licenses": [{
+            "type": "MIT",
+            "url": "https://github.com/joshuagoodson-wf/pies/blob/master/README.md"
+    }],
+    "keywords": ["package.json"],
+    "dependencies": {
+            "optimist": "~0.6.0",
+            "phantomjs": "*"
+    },
+    "devDependencies": {
+            "grunt": "~0.4.1",
+            "grunt-contrib-jshint": "~0",
+            "grunt-contrib-qunit": "~0"
+    },
+    "scripts": {
+            "test": "grunt citest"
+    }
+}
