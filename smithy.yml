@@ -8,7 +8,7 @@ requirements:
 env:
   - LIKES=PIES
   - EATS=TASTY_PIES
-  - EAT_PIES_SLOWLY=10
+  - EAT_PIES_SLOWLY=2
   - PHANTOMJS_CDNURL=https://s3.amazonaws.com/infeng-phantomjs
 
 script:
@@ -16,18 +16,14 @@ script:
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
   - ls -al $HOME
-  - touch $HOME/pies.txt
-  - 'echo "TEST REPORTS DIR: $TEST_REPORTS_DIR"'
-  - cp test-xml/* $TEST_REPORTS_DIR
   - find . -type f -ls
-  - ls -al test-reports/
   - ls -al $HOME
+  - ls -al 
   - npm install phantomjs
 
 after_script:
   - tar -C docs -cvzf ./pie-help.tar.gz html
 
-documentation: pie-help.tar.gz
-
-test_reports:
-  - test-reports/*.xml
+artifacts:
+  documentation:
+  - pie-help.tar.gz
