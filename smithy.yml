@@ -1,8 +1,6 @@
 project: python
 runtime: 2.7
 
-runner_image: docker.webfilings.org/devops/smithy-runner-java1.8:1.11.0
-
 requirements:
   - requirements.txt
   - requirements_dev.txt
@@ -10,24 +8,26 @@ requirements:
 env:
   - LIKES=PIES
   - EATS=TASTY_PIES
-  - EAT_PIES_SLOWLY=10
+  - EAT_PIES_SLOWLY=2
 
 script:
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
+  - ls -al
   - ls -al $HOME
   - touch $HOME/pies.txt
-  - 'echo "TEST REPORTS DIR: $TEST_REPORTS_DIR"'
-  - cp test-xml/* $TEST_REPORTS_DIR
   - find . -type f -ls
-  - ls -al test-reports/
+  - ls -al
   - ls -al $HOME
+  - env
+  - echo $GITHUB_ACCESS_TOKEN
 
 after_script:
   - tar -C docs -cvzf ./pie-help.tar.gz html
 
-documentation: pie-help.tar.gz
-
-test_reports:
+artifacts:
+  documentation:
+  - pie-help.tar.gz
+  tests:
   - test-reports/*.xml
