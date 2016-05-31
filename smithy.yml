@@ -1,8 +1,6 @@
 project: python
 runtime: 2.7
 
-runner_image: docker.webfilings.org/devops/smithy-runner-java1.8:1.11.0
-
 requirements:
   - requirements.txt
   - requirements_dev.txt
@@ -11,6 +9,7 @@ env:
   - LIKES=PIES
   - EATS=TASTY_PIES
   - EAT_PIES_SLOWLY=10
+  - PHANTOMJS_CDNURL=https://s3.amazonaws.com/infeng-phantomjs
 
 script:
   - nosetests
@@ -23,6 +22,7 @@ script:
   - find . -type f -ls
   - ls -al test-reports/
   - ls -al $HOME
+  - npm install phantomjs
 
 after_script:
   - tar -C docs -cvzf ./pie-help.tar.gz html
