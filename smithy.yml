@@ -14,12 +14,10 @@ script:
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
-  - ls -al
   - ls -al $HOME
-  - touch $HOME/pies.txt
   - find . -type f -ls
-  - ls -al
   - ls -al $HOME
+  - ls -al
   - env
   - echo $GITHUB_ACCESS_TOKEN
 
@@ -29,5 +27,3 @@ after_script:
 artifacts:
   documentation:
   - pie-help.tar.gz
-  tests:
-  - test-reports/*.xml
