@@ -1,4 +1,5 @@
-language: java
+project: lambda
+language: python
 
 requirements:
   - requirements.txt
