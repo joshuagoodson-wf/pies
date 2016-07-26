@@ -18,7 +18,6 @@ script:
   - touch $HOME/pies.txt
   - 'echo "TEST REPORTS DIR: $TEST_REPORTS_DIR"'
   - find . -type f -ls
-  - ls -al test-reports/
   - ls -al $HOME
 
 after_script:
