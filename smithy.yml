@@ -1,8 +1,6 @@
 project: lambda
 language: python
 
-runner_image: docker.webfilings.org/devops/smithy-runner-java1.8:1.11.0
-
 requirements:
   - requirements.txt
   - requirements_dev.txt
