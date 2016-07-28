@@ -1,6 +1,10 @@
 project: lambda
 language: python
 
+lambda_zipfile:
+  requirements:
+    - requirements.txt
+
 requirements:
   - requirements.txt
   - requirements_dev.txt
