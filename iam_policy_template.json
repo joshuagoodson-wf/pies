@@ -1,0 +1,44 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:GetRecords",
+                "kinesis:GetShardIterator",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams"
+            ],
+            "Resource": [
+                {{ kinesis_stream_arn_1 }},
+                {{ kinesis_stream_arn_2 }},
+                {{ kinesis_stream_arn_3 }}
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:List*",
+                "s3:Get*",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                {{ logs_arn_1 }},
+                {{ logs_arn_2 }},
+                {{ logs_arn_3 }},
+                {{ logs_arn_4 }},
+                {{ logs_arn_5 }},
+                {{ logs_arn_6 }}
+            ]
+        }
+    ]
+}
