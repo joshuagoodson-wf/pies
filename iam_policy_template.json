@@ -10,9 +10,7 @@
                 "kinesis:ListStreams"
             ],
             "Resource": [
-                {{ kinesis_stream_arn_1 }},
-                {{ kinesis_stream_arn_2 }},
-                {{ kinesis_stream_arn_3 }}
+                "arn:aws:kinesis:us-east-1:663511558366:stream/harbour-wk-dev-east"
             ]
         },
         {
@@ -32,12 +30,7 @@
                 "s3:PutObject"
             ],
             "Resource": [
-                {{ logs_arn_1 }},
-                {{ logs_arn_2 }},
-                {{ logs_arn_3 }},
-                {{ logs_arn_4 }},
-                {{ logs_arn_5 }},
-                {{ logs_arn_6 }}
+                "arn:aws:s3:::harbour-wk-dev-east-logs"
             ]
         }
     ]
