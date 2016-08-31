@@ -19,7 +19,7 @@ script:
   - ls -al $HOME
 
 artifacts:
-  java:
+  pub:
     - app1.jar
     - app2.jar
     - app3.jar
