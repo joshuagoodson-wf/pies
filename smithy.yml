@@ -1,4 +1,5 @@
-project: java
+project: pies
+language: custom
 
 runner_image: docker.webfilings.org/devops/smithy-runner-java1.8:1.11.0
 
