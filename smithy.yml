@@ -20,9 +20,6 @@ script:
   - ls -al $HOME
 
 artifacts:
-  pub:
+  java:
     - app1.jar
-  documentation:
     - app2.jar
-  docker:
-    - app3.jar
