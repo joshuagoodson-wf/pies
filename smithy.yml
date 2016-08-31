@@ -21,5 +21,7 @@ script:
 artifacts:
   pub:
     - app1.jar
+  documentation:
     - app2.jar
+  docker:
     - app3.jar
