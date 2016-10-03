@@ -1,7 +1,7 @@
 project: python
 runtime: 2.7
 
-runner_image: docker.webfilings.org/joshuagoodson-wf/smithy-runner:3.4.3-devtools-72-2
+runner_image: docker.webfilings.org/joshuagoodson-wf/smithy-runner:3.4.3-devtools-72-3
 
 requirements:
   - requirements.txt
