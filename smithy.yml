@@ -1,6 +1,8 @@
 project: python
 runtime: 2.7
 
+runner_image: docker.webfilings.org/joshuagoodson-wf/smithy-runner:3.4.3-devtools-72
+
 requirements:
   - requirements.txt
   - requirements_dev.txt
@@ -11,6 +13,7 @@ env:
   - EAT_PIES_SLOWLY=10
 
 script:
+  - printenv
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
