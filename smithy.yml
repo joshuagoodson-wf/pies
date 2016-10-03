@@ -13,7 +13,7 @@ env:
   - EAT_PIES_SLOWLY=10
 
 script:
-  - printenv
+  - printenv | grep "GIT"
   - nosetests
   - python setup.py sdist
   - 'echo "ALL UR WEBFILINGS ARE BELONG TO WORKIVA: $HOME"'
