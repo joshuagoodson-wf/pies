@@ -23,6 +23,7 @@ script:
   - find . -type f -ls
   - ls -al test-reports/
   - ls -al $HOME
+  - echo "this is just a test"
 
 after_script:
   - tar -C docs -cvzf ./pie-help.tar.gz html
